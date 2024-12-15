@@ -10,8 +10,13 @@ import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.world.World;
 
 import javax.swing.text.html.parser.Entity;
+import java.util.UUID;
 
 public class RapsolPlaceCrystal implements ClientModInitializer {
+	/**
+	 * {@link #onInitializeClient()}
+	 * this initializes the client lol (penis)
+	 */
 	@Override
 	public void onInitializeClient() {
 
@@ -20,6 +25,7 @@ public class RapsolPlaceCrystal implements ClientModInitializer {
 
 		ClientTickEvents.START_CLIENT_TICK.register(client -> {
 			if (client.world == null || client.player == null) return;
+			UUID id = UUID.randomUUID();
 
 			if (client.player.getMainHandStack().getItem() == Items.END_CRYSTAL && client.options.useKey.isPressed()) {
 				if (client.crosshairTarget instanceof BlockHitResult blockHitResult) {

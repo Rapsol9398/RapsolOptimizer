@@ -1,17 +1,18 @@
 {
 	"schemaVersion": 1,
-	"id": "boatitemview",
+	"id": "rapsoloptimizer",
 	"version": "${version}",
-	"name": "Boat Item View",
-	"description": "lets you see the items in your hand while youre in a boat",
+	"name": "RapsolOptimizer",
+	"description": "I let you crystal very fast :3",
 	"authors": [
-		"50ap5ud5"
+		"Rapsol9398"
 	],
 	"contact": {
 		"TikTik": "https://www.tiktok.com/@rapsol9398",
 		"Discord": "https://discord.gg/zk7BKYAhhb"
 	},
-	"license": "CC0-1.0",
+	"license": "Proprietary",
+	"licenseDetails": "View License.txt file for details",
 	"icon": "assets/rapsoloptimizer/icon.png",
 	"environment": "*",
 	"entrypoints": {
