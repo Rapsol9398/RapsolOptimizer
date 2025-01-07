@@ -20,15 +20,13 @@
 			"com.rapsol.RapsolPlaceCrystal",
 			"com.rapsol.AntiCrystalRefresh",
 			"com.rapsol.RapsolDestroyCrystal"
-		],
-		"fabric-datagen": [
 		]
 	},
 	"mixins": [
 		"rapsoloptimizer.mixins.json"
 	],
 	"depends": {
-		"fabricloader": ">=0.16.5",
+		"fabricloader": ">=0.15.11",
 		"minecraft": "~1.21",
 		"java": ">=21",
 		"fabric-api": "*"

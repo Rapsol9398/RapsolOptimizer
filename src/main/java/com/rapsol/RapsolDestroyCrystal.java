@@ -4,6 +4,7 @@ import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.decoration.EndCrystalEntity;
+import net.minecraft.util.Hand;
 import net.minecraft.util.hit.EntityHitResult;
 import net.minecraft.util.hit.HitResult;
 
@@ -19,9 +20,12 @@ public class RapsolDestroyCrystal implements ClientModInitializer {
             if (crosshairTarget instanceof EntityHitResult entityHitResult) {
                 Entity target = entityHitResult.getEntity();
                 if (target instanceof EndCrystalEntity) {
-                    if (client.options.attackKey.isPressed()) {
-                        if (client.interactionManager != null) {
-                            client.interactionManager.attackEntity(client.player, target);
+                    if (client.options.attackKey.wasPressed()) {
+                        if (!client.player.handSwinging) {
+                            client.player.swingHand(Hand.MAIN_HAND);
+                        }
+                            if (client.interactionManager != null) {
+                                client.interactionManager.attackEntity(client.player, target);
                         }
                     }
                 }

@@ -13,19 +13,14 @@ import javax.swing.text.html.parser.Entity;
 import java.util.UUID;
 
 public class RapsolPlaceCrystal implements ClientModInitializer {
-	/**
-	 * {@link #onInitializeClient()}
-	 * this initializes the client lol (penis)
-	 */
 	@Override
 	public void onInitializeClient() {
 
-		/*dont steal the code or youre gay!*/
+		/*dont steal the code or youre bad at cpvp!*/
 		/*"only because the mod isnt allowed doesnt mean you shouldnt use it" - Muni´s__ Grandma*/
 
 		ClientTickEvents.START_CLIENT_TICK.register(client -> {
 			if (client.world == null || client.player == null) return;
-			UUID id = UUID.randomUUID();
 
 			if (client.player.getMainHandStack().getItem() == Items.END_CRYSTAL && client.options.useKey.isPressed()) {
 				if (client.crosshairTarget instanceof BlockHitResult blockHitResult) {
