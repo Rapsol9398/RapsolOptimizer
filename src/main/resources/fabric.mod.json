@@ -3,7 +3,7 @@
 	"id": "rapsoloptimizer",
 	"version": "${version}",
 	"name": "RapsolOptimizer",
-	"description": "I let you crystal very fast :3",
+	"description": "I optimize your crystalling :3",
 	"authors": [
 		"Rapsol9398"
 	],
@@ -18,8 +18,7 @@
 	"entrypoints": {
 		"client": [
 			"com.rapsol.RapsolPlaceCrystal",
-			"com.rapsol.AntiCrystalRefresh",
-			"com.rapsol.RapsolDestroyCrystal"
+			"com.rapsol.AntiCrystalRefresh"
 		]
 	},
 	"mixins": [
